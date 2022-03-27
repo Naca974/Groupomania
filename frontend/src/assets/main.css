@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #0e1d48;
+}
+
+.navbar-light {
+  background-color: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+}
+
+.vertical-center {
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.vertical-center .form-control:focus {
+  border-color: #2554ff;
+  box-shadow: none;
+}
+
+.vertical-center h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+
+label {
+  font-weight: 500;
+}
+
+.form-group {
+  margin-top: 5px;
+}
+
+.card-title {
+  cursor: pointer;
+}
+
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
+.profile {
+  color: white;
+  padding-bottom: 50px;
+}
+
+.profil-img > img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.flex-cont {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.flex-cont > button {
+  width: 35%;
+}
+
+.success-msg {
+  padding: 1rem;
+  background-color: #8bc34a;
+  display: block;
+  color: #fff;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+.success-msg > h3,
+.error-msg > h3 {
+  padding-bottom: 0px !important;
+}
+.error-msg {
+  padding: 1rem;
+  background-color: rgb(182, 30, 55);
+  display: block;
+  color: #fff;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+.main-btn {
+  background: #30475e;
+  color: white;
+}
+
+.main-btn-post {
+  background: #30475e;
+  color: white;
+  width: 25.7%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+a {
+  color: #0e1d48;
+  text-decoration: none;
+}
+
+h5:hover {
+  text-decoration: underline #cf5258;
+  cursor: pointer;
+}
+
+input:disabled {
+  background: #ccc !important;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 640px) {
+  .logo_header {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .logo_header {
+    width: 140px;
+  }
+}
