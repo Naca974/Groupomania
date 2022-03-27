@@ -9,7 +9,7 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div>
-                                            <img class="rounded-circle" width="45" :src="article.User.profile" :alt="article.User.username">
+                                            <img class="rounded-circle" width="45" :src="loadImage(article.User.profile)" :alt="article.User.username">
                                         </div>
                                         <div>
                                             <div class="ms-2">{{article.User.username}}</div>
@@ -157,7 +157,15 @@ export default {
             }
             console.log("final result is: ",result)
             return result;
-        }
+        },
+        loadImage(profile) {
+            console.log(typeof profile);
+            if(profile) {
+                return profile;
+            } else {
+            return `${process.env.VUE_APP_API_BACKEND_URL}images/default.png`;
+            }
+        },
     },
 }
 

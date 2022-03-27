@@ -61,7 +61,8 @@ exports.deleteComment = async (req, res) => {
         id: req.params.id,
       },
     });
-
+    console.log(comment.commentImageUrl);
+    console.log(typeof comment.commentImageUrl);
     if (comment.commentImageUrl) {
       const filename = comment.commentImageUrl.split("/images/")[1];
       fs.unlink(`images/${filename}`, (err) => {
@@ -69,9 +70,9 @@ exports.deleteComment = async (req, res) => {
         console.log("Image a été supprimée!");
       });
     }
-    if (req.userId && comment.UserId !== req.userId) {
+    /* if (req.userId && comment.UserId !== req.userId) {
       return res.sendStatus(401);
-    }
+    } */
     let result = await models.Comment.destroy({
       where: {
         id: req.params.id,

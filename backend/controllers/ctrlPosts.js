@@ -174,6 +174,8 @@ exports.deletePost = async (req, res) => {
       },
     });
 
+    console.log(post.imageUrl);
+    console.log(typeof post.imageUrl);
     if (post.imageUrl) {
       const filename = post.imageUrl.split("/images/")[1];
       fs.unlink(`images/${filename}`, (err) => {

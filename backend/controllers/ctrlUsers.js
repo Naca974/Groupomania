@@ -97,7 +97,7 @@ exports.updateProfile = async (req, res) => {
       if(!user) {
         return res.status(404).json({error: "User not Found"});
       }
-
+      console.log(typeof user.profile);
       if(user.profile) {
         const filename = user.profile.split("/images/")[1];
         fs.unlink(`images/${filename}`, (err) => {
@@ -149,7 +149,7 @@ exports.deleteProfile = async (req, res) => {
     }
     console.log("here");
     console.log(user.profile)
-    if(user.profile) {
+    if(user.profile !== 'null') {
       console.log("enter")
       const filename = user.profile.split("/images/")[1];
       fs.unlink(`images/${filename}`, (error) => {

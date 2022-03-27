@@ -47,9 +47,14 @@ label {
   min-height: 100vh;
 }
 
+.nonvalid {
+  display: flex;
+  color: red;
+}
+
 .profile {
-  color: white;
   padding-bottom: 50px;
+  color: white;
 }
 
 .profil-img > img {
