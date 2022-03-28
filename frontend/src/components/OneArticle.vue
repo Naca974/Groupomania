@@ -169,7 +169,6 @@ export default {
           headers: { Authorization: "Bearer " + localStorage.getItem("token") },
         })
         .then((reponse) => {
-          console.log(reponse);
           this.oneArticle = reponse.data;
         })
         .catch((error) => {
@@ -199,7 +198,6 @@ export default {
           headers: { Authorization: "Bearer " + localStorage.getItem("token") },
         })
         .then(() => {
-          console.log("commentaire supprimé");
           this.allComments.splice(index, 1);
           this.loadArticle();
         })
@@ -223,7 +221,6 @@ export default {
             }
           )
           .then(() => {
-            console.log("commentaire créé");
             this.loadComments();
             this.loadArticle();
             this.commentInput.description = null;

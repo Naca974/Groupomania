@@ -65,7 +65,6 @@ export default {
                     "Authorization": 'Bearer ' + localStorage.getItem('token')
                     }})
                 .then(() => {
-                    console.log('article créé');
                     this.$emit('articleCree');
                     this.clearData();
                 })
@@ -79,7 +78,6 @@ export default {
                     "Authorization": 'Bearer ' + localStorage.getItem('token')
                     }})
                 .then(() => {
-                    console.log('Post créé');
                     this.$emit('articleCree');
                     this.clearData();
                 })

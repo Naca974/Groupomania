@@ -31,14 +31,6 @@
             @change="onSelect"
             required
           />
-          <!-- <button
-            @click="isUpdate = !isUpdate"
-            type="button"
-            class="btn main-btn mb-5"
-          >
-            Modifier Compte
-          </button> -->
-          
         </div>
         <div v-show="success" class="success-msg">
             <h3>User Update Successful</h3>
@@ -59,28 +51,6 @@
               disabled="true"
             />
           </div>
-          <!-- <div class="mb-3">
-            <label for="password" class="form-label white">Mot de passe</label>
-            <input
-              type="password"
-              class="form-control"
-              id="password"
-              v-model="password"
-              placeholder="mot de passe"
-            />
-          </div> -->
-          <!-- <div class="mb-3">
-            <label for="validPassword" class="form-label white"
-              >Confirmer mot de passe</label
-            >
-            <input
-              type="password"
-              class="form-control"
-              id="validPassword"
-              v-model="confirmPassword"
-              placeholder="confirmer votre mot de passe"
-            />
-          </div> -->
         <div class="mb-3">
             <label for="validPassword" class="form-label white"
               >Biography</label
@@ -148,7 +118,6 @@ export default {
                 "Authorization": 'Bearer ' + localStorage.getItem('token')
                 }})
             .then(() => {
-                console.log('User Updated');
                 this.success = true;
                 setTimeout(() => {
                     this.success = false;
@@ -170,7 +139,6 @@ export default {
                 "Authorization": 'Bearer ' + localStorage.getItem('token')
                 }})
             .then(() => {
-                console.log('User Updated');
                 this.success = true;
                 setTimeout(() => {
                     this.success = false;
@@ -208,7 +176,6 @@ export default {
     loadImage() {
       console.log(typeof this.userData.profile);
         if(this.userData.profile) {
-            console.log("here")
             return this.userData.profile;
         } else {
            return `${process.env.VUE_APP_API_BACKEND_URL}images/default.png`;

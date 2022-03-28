@@ -145,14 +145,11 @@ export default {
             console.log(this.userRole);
             if(this.userRole) {
                 result = true;
-                console.log('in admin');
             } else {
                 if(articleUserId == this.userId) {
                     result = true;
-                    console.log('in same user');
                 } else {
                     result = false;
-                    console.log('in else');
                 }
             }
             console.log("final result is: ",result)
